@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 1: título no topo e a lista de receitas embaixo -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Título da tela -->
+    <TextView
+        android:id="@+id/textoTituloLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/espaco_medio"
+        android:text="@string/titulo_lista"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+
+    <!-- Lista rolável com as receitas (preenchida pelo Adapter) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaReceitas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_receita" />
+
+</LinearLayout>

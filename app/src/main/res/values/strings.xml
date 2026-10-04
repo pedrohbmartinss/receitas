@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Receitas</string>
+
+    <!-- Tela principal (lista) -->
+    <string name="titulo_lista">Minhas receitas</string>
+    <string name="descricao_imagem_receita">Ícone de receita</string>
+
+    <!-- Textos com valores preenchidos pelo código -->
+    <string name="tempo_preparo">Tempo de preparo: %1$d min</string>
+
+    <!-- Tela de detalhes -->
+    <string name="titulo_ingredientes">Ingredientes</string>
+    <string name="titulo_modo_preparo">Modo de preparo</string>
+    <string name="titulo_observacao">Observação</string>
+    <string name="botao_favoritar">Favoritar</string>
+    <string name="botao_desfavoritar">Remover dos favoritos</string>
+    <string name="status_favorita">Esta receita está nos seus favoritos</string>
+    <string name="status_nao_favorita">Esta receita não está nos favoritos</string>
+    <string name="botao_voltar">Voltar</string>
+    <string name="receita_nao_encontrada">Receita não encontrada</string>
+</resources>

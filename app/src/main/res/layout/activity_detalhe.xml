@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 2: detalhes da receita. O ScrollView permite rolar textos longos. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizDetalhe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalheActivity">
+
+    <!-- Conteúdo empilhado na vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_medio">
+
+        <!-- FrameLayout: sobrepõe a categoria em cima da imagem -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_imagem_detalhe"
+            android:background="?attr/colorSurfaceVariant">
+
+            <ImageView
+                android:id="@+id/imagemDetalhe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/descricao_imagem_receita"
+                android:padding="@dimen/espaco_grande"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_receita" />
+
+            <TextView
+                android:id="@+id/textoCategoriaDetalhe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/espaco_pequeno"
+                android:background="?attr/colorPrimaryContainer"
+                android:paddingHorizontal="@dimen/espaco_pequeno"
+                android:paddingVertical="4dp"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="?attr/colorOnPrimaryContainer" />
+        </FrameLayout>
+
+        <!-- Nome e tempo de preparo -->
+        <TextView
+            android:id="@+id/textoNomeDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+
+        <TextView
+            android:id="@+id/textoTempoDetalhe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!-- Ingredientes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/titulo_ingredientes"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <TextView
+            android:id="@+id/textoIngredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!-- Modo de preparo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/titulo_modo_preparo"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <TextView
+            android:id="@+id/textoModoPreparo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <!-- Bloco de observação: começa escondido e só aparece se existir observação -->
+        <LinearLayout
+            android:id="@+id/blocoObservacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:background="?attr/colorSecondaryContainer"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_pequeno"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_observacao"
+                android:textAppearance="?attr/textAppearanceTitleSmall"
+                android:textColor="?attr/colorOnSecondaryContainer" />
+
+            <TextView
+                android:id="@+id/textoObservacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSecondaryContainer" />
+        </LinearLayout>
+
+        <!-- Espaço antes da área de favoritos -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/espaco_grande" />
+
+        <!-- Status atual do favorito (muda ao tocar no botão) -->
+        <TextView
+            android:id="@+id/textoStatusFavorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+        <!-- Botão de favoritar (área de toque de no mínimo 48dp) -->
+        <Button
+            android:id="@+id/botaoFavoritar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_pequeno"
+            android:minHeight="@dimen/altura_minima_toque"
+            android:text="@string/botao_favoritar" />
+
+        <!-- Botão para voltar à lista -->
+        <Button
+            android:id="@+id/botaoVoltar"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/altura_minima_toque"
+            android:text="@string/botao_voltar" />
+
+    </LinearLayout>
+</ScrollView>

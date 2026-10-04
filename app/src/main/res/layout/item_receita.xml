@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Um item da lista: ícone à esquerda e os textos à direita.
+     O item inteiro é clicável e tem altura mínima maior que 48dp. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemReceita"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/altura_item_lista"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/espaco_medio"
+    android:paddingVertical="@dimen/espaco_pequeno">
+
+    <!-- Ícone da receita -->
+    <ImageView
+        android:id="@+id/imagemReceita"
+        android:layout_width="@dimen/tamanho_imagem_item"
+        android:layout_height="@dimen/tamanho_imagem_item"
+        android:contentDescription="@string/descricao_imagem_receita"
+        android:src="@drawable/ic_receita" />
+
+    <!-- Espaço entre o ícone e os textos -->
+    <Space
+        android:layout_width="@dimen/espaco_medio"
+        android:layout_height="0dp" />
+
+    <!-- Coluna com nome, categoria e tempo -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textoNomeReceita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceTitleMedium" />
+
+        <TextView
+            android:id="@+id/textoCategoriaReceita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        <TextView
+            android:id="@+id/textoTempoReceita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodySmall" />
+    </LinearLayout>
+
+</LinearLayout>

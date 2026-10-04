@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos usados nas telas -->
+    <dimen name="espaco_pequeno">8dp</dimen>
+    <dimen name="espaco_medio">16dp</dimen>
+    <dimen name="espaco_grande">24dp</dimen>
+
+    <!-- Área mínima de toque recomendada para acessibilidade -->
+    <dimen name="altura_minima_toque">48dp</dimen>
+
+    <!-- Tamanhos das imagens e dos itens da lista -->
+    <dimen name="altura_item_lista">72dp</dimen>
+    <dimen name="tamanho_imagem_item">48dp</dimen>
+    <dimen name="altura_imagem_detalhe">180dp</dimen>
+</resources>
